@@ -19,7 +19,7 @@ namespace MatrixSum
             Console.Write("Matrix. Insert the number of columns: ");
             cols = int.Parse(Console.ReadLine());
             Console.WriteLine();
-
+            
             // Ввод элементов первой и второй матрицы.
             Console.WriteLine("Matrix 1. Insert the numbers: ");
             int[,] matrix1 = new int[rows, cols];
