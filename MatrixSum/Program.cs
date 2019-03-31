@@ -10,7 +10,7 @@ namespace MatrixSum
     {
 
         static void Main(string[] args)
-        {
+        {   // Ввод количества рядов и столбцов матрицы.
             int rows;
             Console.Write("Matrix. Insert the number of rows: ");
             rows = int.Parse(Console.ReadLine());
@@ -20,6 +20,7 @@ namespace MatrixSum
             cols = int.Parse(Console.ReadLine());
             Console.WriteLine();
 
+            // Ввод элементов первой и второй матрицы.
             Console.WriteLine("Matrix 1. Insert the numbers: ");
             int[,] matrix1 = new int[rows, cols];
             FillMatrix(matrix1);
@@ -28,6 +29,7 @@ namespace MatrixSum
             int[,] matrix2 = new int[rows, cols];
             FillMatrix(matrix2);
 
+            // Сложение двух матриц.
             int[,] matrixSum = new int[rows, cols];
             for (int i = 0; i < rows; i++)
             {
@@ -37,6 +39,7 @@ namespace MatrixSum
                 }
             }
 
+            // Вывод первой, второй матрицы и матрицы - результата суммы.
             Console.WriteLine("Matrix 1:");
             GetMatrix(matrix1);
 
@@ -49,6 +52,7 @@ namespace MatrixSum
             Console.WriteLine("Press any key to exit.");
             Console.ReadKey();
         }
+        // Метод заполнения матрицы.
         public static void FillMatrix(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
@@ -61,6 +65,7 @@ namespace MatrixSum
                 Console.WriteLine();
             }
         }
+        // Метод вывода матрицы.
         public static void GetMatrix(int[,] matrix)
         {
             Console.WriteLine();
